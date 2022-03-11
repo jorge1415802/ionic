@@ -1,0 +1,26 @@
+<app-header titulo="input"></app-header>
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Input normal</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombre" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <form #formulario= "ngForm">
+    <ion-list-header>
+      <ion-label>Formulario valido : {{formulario.valid}}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Email : </ion-label>
+      <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="usuario.email" ></ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>
